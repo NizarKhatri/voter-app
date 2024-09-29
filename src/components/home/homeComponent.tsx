@@ -18,6 +18,7 @@ export default function HomeComponent() {
     content: () => componentRef.current ?? null,
     onBeforeGetContent: async () => {
       await UpdateUserByCardId(memberId);
+      setMemberId(0);
     },
   });
 
@@ -27,7 +28,6 @@ export default function HomeComponent() {
         if (data !== null) {
           console.log(data);
           setMember(data);
-          setMemberId(0);
         }
       });
     }
