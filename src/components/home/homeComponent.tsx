@@ -32,7 +32,7 @@ export default function HomeComponent() {
   };
   return (
     <>
-      <div className="grid gap-3 text-xs">
+      <div className="grid gap-3 text-lg sm:text-xs">
         <Input
           id="name"
           type="number"
