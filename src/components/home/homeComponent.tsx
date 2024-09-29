@@ -133,8 +133,8 @@ export default function Component() {
         </div>
       </div>
 
-      <div className="flex justify-end">
-        <Button onClick={handlePrint}>Save</Button>
+      <div className="hidden sm:flex justify-end">
+        <Button onClick={handlePrint}>Print</Button>
       </div>
     </>
   );
