@@ -10,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-import Logo from '../../assets/wileyIcon.png';
 
 type Props = {
   username: string;
