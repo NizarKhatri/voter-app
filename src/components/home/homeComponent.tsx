@@ -35,7 +35,7 @@ export default function Component() {
       <div className="grid gap-3 text-xs">
         <Input
           id="name"
-          type="text"
+          type="number"
           className="w-1/3 rounded-lg"
           defaultValue=""
           placeholder="Enter member id"
