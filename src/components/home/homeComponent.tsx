@@ -29,6 +29,7 @@ export default function HomeComponent() {
           console.log(data);
           setMember(data);
           setMemberId(null);
+          handlePrint();
         }
       });
     }
