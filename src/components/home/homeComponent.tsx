@@ -36,9 +36,9 @@ export default function Component() {
         <Input
           id="name"
           type="number"
-          className="w-1/3 rounded-lg"
+          className="w-full sm:w-1/3 rounded-lg"
           defaultValue=""
-          placeholder="Enter member id"
+          placeholder="Enter Member Id"
           onChange={(e) => setMemberId(+e.target.value)}
           onKeyUp={(e) => fetchMemberData(e)}
         />
