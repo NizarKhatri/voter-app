@@ -11,14 +11,13 @@ import { fetchUserByCardId, UpdateUserByCardId } from '@/api/user.service';
 
 export default function HomeComponent() {
   const [member, setMember] = useState<Member>();
-  const [memberId, setMemberId] = useState<number | null>(0);
+  const [memberId, setMemberId] = useState<number>(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current ?? null,
     onBeforeGetContent: async () => {
       await UpdateUserByCardId(memberId);
-      inputRef.current?.focus();
     },
   });
 
@@ -28,7 +27,7 @@ export default function HomeComponent() {
         if (data !== null) {
           console.log(data);
           setMember(data);
-          setMemberId(null);
+          setMemberId(0);
         }
       });
     }
