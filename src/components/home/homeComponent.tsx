@@ -9,7 +9,7 @@ import { Input } from '../ui/input';
 import { Member } from '@/models/user';
 import { fetchUserByCardId, UpdateUserByCardId } from '@/api/user.service';
 
-export default function Component() {
+export default function HomeComponent() {
   const [member, setMember] = useState<Member>();
   const [memberId, setMemberId] = useState<number>(0);
   const componentRef = useRef();
@@ -43,14 +43,14 @@ export default function Component() {
           onKeyUp={(e) => fetchMemberData(e)}
         />
         <div ref={componentRef}>
-          <Card>
+          <Card className="w-full sm:w-1/3">
             <CardHeader>
               <CardTitle className="text-md">MCKJ ELECTION 2024-2027</CardTitle>
             </CardHeader>
             <CardContent>
               {member !== null && (
                 <div>
-                  <table className="w-full table-auto">
+                  <table className="table-auto">
                     <tbody>
                       <tr>
                         <td style={{ width: '90px' }}>
@@ -133,8 +133,10 @@ export default function Component() {
         </div>
       </div>
 
-      <div className="hidden sm:flex justify-end">
-        <Button onClick={handlePrint}>Print</Button>
+      <div className="hidden sm:flex justify-start w-1/3">
+        <Button className="w-full" onClick={handlePrint}>
+          Print
+        </Button>
       </div>
     </>
   );
